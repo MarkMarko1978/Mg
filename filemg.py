@@ -10,17 +10,11 @@ intents.members = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
 
-ROLE_MODERATOR = "Модератор"
-ROLE_ADMIN = "Администратор"
 WEBHOOK_URL = "https://discord.com/api/webhooks/1489200212260946031/Vhxw8Hx9_ZpGnVW1glB_Kq1RV3padI9wxSqdZafpzpCqkoXpOD0-Zj11O7EaxhPz0tzs"
-
-def is_mod(member: discord.Member) -> bool:
-    role_names = [r.name for r in member.roles]
-    return ROLE_MODERATOR in role_names or ROLE_ADMIN in role_names
 
 def mod_check():
     async def predicate(ctx):
-        if is_mod(ctx.author):
+        if ctx.author.guild_permissions.administrator or ctx.author.id == ctx.guild.owner_id:
             return True
         await ctx.send("❌ Нет прав", delete_after=5)
         return False
