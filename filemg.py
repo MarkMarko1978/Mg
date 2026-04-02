@@ -21,14 +21,14 @@ class FileMGSelect(Select):
     def __init__(self):
         options = [
             discord.SelectOption(label="Liberium 1.7", description="Нажми чтобы получить ссылку", emoji="📦"),
-            discord.SelectOption(label="Xworm Fixed", description="Нажми чтобы получить ссылку", emoji="📦"),
+            discord.SelectOption(label="Xworm v5.6", description="Нажми чтобы получить ссылку", emoji="📦"),
         ]
         super().__init__(placeholder="Выберите инструмент...", options=options)
 
     async def callback(self, interaction: discord.Interaction):
         links = {
             "Liberium 1.7": "https://drive.google.com/file/d/1IkkHs3s0kdaKNY3AV5lqNQtR3weIhg8V/view?usp=sharing",
-            "Xworm Fixed": "https://drive.google.com/file/d/1R0VidZ83_p186TlaCLC1z8wQ46IEMyCs/view",
+            "Xworm v5.6": "https://drive.google.com/file/d/1gvKrMApXUH7L9t58nG2VZbYwQwGV4Bqe/view?usp=sharing",
         }
         selected = self.values[0]
         link = links[selected]
@@ -58,7 +58,7 @@ async def filemg(ctx):
         color=discord.Color.purple()
     )
     embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1489194360854675488/standard_4.gif?ex=69cf87d3&is=69ce3653&hm=238fb907ff1c006165275ad3a542139c8a1dd99ffe7f332e238c0bf5c5daaf52&=")
-    embed.set_footer(text="FileMG | by lort")
+    embed.set_footer(text="FileMG | by lort  пароль - EzSq")
     await ctx.send(embed=embed, view=FileMGView())
     await ctx.message.delete()
 
