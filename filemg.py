@@ -1,7 +1,6 @@
 import discord
 from discord.ext import commands
 import os
-import aiohttp
 from discord.ui import Select, View
 
 intents = discord.Intents.default()
@@ -9,8 +8,6 @@ intents.message_content = True
 intents.members = True
 
 bot = commands.Bot(command_prefix="!", intents=intents)
-
-WEBHOOK_URL = "https://discord.com/api/webhooks/1489200212260946031/Vhxw8Hx9_ZpGnVW1glB_Kq1RV3padI9wxSqdZafpzpCqkoXpOD0-Zj11O7EaxhPz0tzs"
 
 def mod_check():
     async def predicate(ctx):
@@ -62,9 +59,7 @@ async def filemg(ctx):
     )
     embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1489194360854675488/standard_4.gif?ex=69cf87d3&is=69ce3653&hm=238fb907ff1c006165275ad3a542139c8a1dd99ffe7f332e238c0bf5c5daaf52&=")
     embed.set_footer(text="FileMG | by lort")
-    async with aiohttp.ClientSession() as session:
-        webhook = discord.Webhook.from_url(WEBHOOK_URL, session=session)
-        await webhook.send(embed=embed, view=FileMGView())
+    await ctx.send(embed=embed, view=FileMGView())
     await ctx.message.delete()
 
 bot.run(os.getenv("TOKEN"))
