@@ -147,9 +147,9 @@ async def filemg4(ctx):
 class FileMG5Select(Select):
     def __init__(self):
         options = [
-            discord.SelectOption(label="Portmap", description="Нажми чтобы получить ссылку", emoji="📦"),
-            discord.SelectOption(label="Cloudpad", description="Нажми чтобы получить ссылку", emoji="📦"),
-            discord.SelectOption(label="VDS (дедик)", description="Нажми чтобы получить ссылку", emoji="📦"),
+            discord.SelectOption(label="Portmap", description="Нажми чтобы получить ссылку", emoji="🚀"),
+            discord.SelectOption(label="Cloudpad", description="Нажми чтобы получить ссылку", emoji="🚀"),
+            discord.SelectOption(label="VDS (дедик)", description="Нажми чтобы получить ссылку", emoji="🚀"),
         ]
         super().__init__(placeholder="Выберите инструмент...", options=options)
 
@@ -160,7 +160,7 @@ class FileMG5Select(Select):
             embed = discord.Embed(color=discord.Color.purple())
             embed.add_field(
                 name="📦 Portmap",
-                value="Ссылка на сайт ᴘᴏʀᴛᴍᴀᴘ - [тык](https://portmap.io)\nopenvpn - [тык](https://openvpn.net/client/)\nСсылка на ᴏᴘᴇɴᴠᴘɴ -",
+                value="Ссылка на сайт ᴘᴏʀᴛᴍᴀᴘ - [тык](https://portmap.io)\nopenvpn - [тык](https://openvpn.net/client/)",
                 inline=False
             )
 
