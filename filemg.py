@@ -144,6 +144,64 @@ async def filemg4(ctx):
     embed.set_footer(text="FileMG | by lort")
     await ctx.send(embed=embed, view=FileMG4View())
     await ctx.message.delete()
+class FileMG5Select(Select):
+    def __init__(self):
+        options = [
+            discord.SelectOption(label="Portmap", description="Нажми чтобы получить ссылку", emoji="📦"),
+            discord.SelectOption(label="Cloudpad", description="Нажми чтобы получить ссылку", emoji="📦"),
+            discord.SelectOption(label="VDS (дедик)", description="Нажми чтобы получить ссылку", emoji="📦"),
+        ]
+        super().__init__(placeholder="Выберите инструмент...", options=options)
+
+    async def callback(self, interaction: discord.Interaction):
+        selected = self.values[0]
+
+        if selected == "Portmap":
+            embed = discord.Embed(color=discord.Color.purple())
+            embed.add_field(
+                name="📦 Portmap",
+                value="Ссылка на сайт ᴘᴏʀᴛᴍᴀᴘ - [тык](https://portmap.io)\nopenvpn - [тык](https://openvpn.net/client/)\nСсылка на ᴏᴘᴇɴᴠᴘɴ -",
+                inline=False
+            )
+
+        elif selected == "Cloudpad":
+            embed = discord.Embed(color=discord.Color.purple())
+            embed.add_field(
+                name="📦 Cloudpad",
+                value="ᴄᴄыᴧᴋᴀ нᴀ ᴄʟᴏᴜᴅᴘᴀᴅ [ᴛыᴋ](https://cloudpad.ru) зᴀходиʍ нᴀ ᴄᴀйᴛ, ᴩᴇᴦиᴄᴛᴩиᴩуᴇʍᴄя и ᴄᴋᴀчиʙᴀᴇʍ ɸᴀйᴧ ᴄʟᴏᴜᴅᴘᴀᴅ.\n\nоᴛᴋᴩыʙᴀᴇʍ ᴄʟᴏᴜᴅᴘᴀᴅ и нᴀ ᴄᴀйᴛᴇ ᴨодʙязыʙᴀᴇʍ ноʍᴇᴩ (ʙ ᴨᴩиᴧожᴇнии ноʍᴇᴩ ᴨодʙязыʙᴀᴛь нᴇᴧьзя, ʙᴀᴄ ᴨᴩоᴄᴛо ʙыᴋинᴇᴛ из ᴀᴋᴋᴀунᴛᴀ). зᴀᴛᴇʍ зᴀходиʍ обᴩᴀᴛно ʙ ᴨᴩиᴧожᴇниᴇ, ᴨᴇᴩᴇходиʍ ʙо ʙᴋᴧᴀдᴋу \"ᴨубᴧиᴋᴀции\" и нᴀжиʍᴀᴇʍ \"добᴀʙиᴛь\".\n\nᴨᴩоᴛоᴋоᴧ бᴇᴩᴇʍ ᴛᴄᴘ. изнᴀчᴀᴧьно у ʙᴀᴄ будᴇᴛ ʜᴛᴛᴘ.\nʙᴄᴛᴀʙᴧяᴇʍ ᴨоᴩᴛы: ᴄʟᴏᴜᴅᴘᴜʙ.ʀᴜ:45454 (бᴇз ᴛᴄᴘ).",
+                inline=False
+            )
+
+        elif selected == "VDS (дедик)":
+            embed = discord.Embed(color=discord.Color.purple())
+            embed.add_field(
+                name="📦 VDS (дедик)",
+                value="Купить дедик с сайта one dash - [тык](https://onedash.ru)\nОтключить запрет/впн перед заходом на сайт!",
+                inline=False
+            )
+
+        embed.set_footer(text="FileMG | by lort")
+        await interaction.response.send_message(embed=embed, ephemeral=True)
+
+
+class FileMG5View(View):
+    def __init__(self):
+        super().__init__(timeout=None)
+        self.add_item(FileMG5Select())
+
+
+@bot.command(name="filemg5")
+@mod_check()
+async def filemg5(ctx):
+    embed = discord.Embed(
+        title="Выберите инструмент из категории",
+        description="Выберите вариант в меню ниже, чтобы просмотреть подробную информацию и получить ссылку для скачивания.",
+        color=discord.Color.purple()
+    )
+    embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1489194360854675488/standard_4.gif?ex=69cf87d3&is=69ce3653&hm=238fb907ff1c006165275ad3a542139c8a1dd99ffe7f332e238c0bf5c5daaf52&=")
+    embed.set_footer(text="FileMG | by lort")
+    await ctx.send(embed=embed, view=FileMG5View())
+    await ctx.message.delete()    
 
 @bot.event
 async def on_ready():
