@@ -22,6 +22,7 @@ class FileMGSelect(Select):
         options = [
             discord.SelectOption(label="Liberium 1.7 Opinion", description="Нажми чтобы получить ссылку", emoji="📦"),
             discord.SelectOption(label="Xworm v5.6", description="Нажми чтобы получить ссылку", emoji="📦"),
+            discord.SelectOption(label="Liberium 1.7", description="Нажми чтобы получить ссылку", emoji="📦"),
         ]
         super().__init__(placeholder="Выберите инструмент...", options=options)
 
@@ -29,6 +30,7 @@ class FileMGSelect(Select):
         links = {
             "Liberium 1.7 Opinion": "https://drive.google.com/file/d/1xgo8yAqVWkXn3Tr9Aqf3zhc_z565lTIR/view?usp=sharing",
             "Xworm v5.6": "https://drive.google.com/file/d/1gvKrMApXUH7L9t58nG2VZbYwQwGV4Bqe/view?usp=sharing",
+            "Liberium 1.7": "https://drive.google.com/file/d/1JDgkrktM3JVkHym8L78FVqsJpK9vzZmD/view?usp=sharing",
         }
         selected = self.values[0]
         link = links[selected]
