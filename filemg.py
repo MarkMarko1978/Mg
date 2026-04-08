@@ -47,7 +47,7 @@ class FileMGView(View):
 @mod_check()
 async def filemg(ctx):
     embed = discord.Embed(title="Выберите инструмент из категории", description="Выберите вариант в меню ниже, чтобы просмотреть подробную информацию и получить ссылку для скачивания.", color=discord.Color.purple())
-    embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1489194360854675488/standard_4.gif?ex=69cf87d3&is=69ce3653&hm=238fb907ff1c006165275ad3a542139c8a1dd99ffe7f332e238c0bf5c5daaf52&=")
+    embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1491483610291634418/standard_6.gif?ex=69d7dbdb&is=69d68a5b&hm=3043de840e883d64b4d56467845b15b254dbe7c5771764cc73507e4a2ca5cd9f&=")
     embed.set_footer(text="FileMG | by lort  пароль - EzSq")
     await ctx.send(embed=embed, view=FileMGView())
     await ctx.message.delete()
@@ -80,7 +80,7 @@ class FileMG2View(View):
 @mod_check()
 async def filemg2(ctx):
     embed = discord.Embed(title="Выберите инструмент из категории", description="Выберите вариант в меню ниже, чтобы просмотреть подробную информацию и получить ссылку для скачивания.", color=discord.Color.purple())
-    embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1489194360854675488/standard_4.gif?ex=69cf87d3&is=69ce3653&hm=238fb907ff1c006165275ad3a542139c8a1dd99ffe7f332e238c0bf5c5daaf52&=")
+    embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1491483610291634418/standard_6.gif?ex=69d7dbdb&is=69d68a5b&hm=3043de840e883d64b4d56467845b15b254dbe7c5771764cc73507e4a2ca5cd9f&=")
     embed.set_footer(text="FileMG | by lort")
     await ctx.send(embed=embed, view=FileMG2View())
     await ctx.message.delete()
@@ -111,7 +111,7 @@ class FileMG3View(View):
 @mod_check()
 async def filemg3(ctx):
     embed = discord.Embed(title="Выберите инструмент из категории", description="Выберите вариант в меню ниже, чтобы просмотреть подробную информацию и получить ссылку для скачивания.", color=discord.Color.purple())
-    embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1489194360854675488/standard_4.gif?ex=69cf87d3&is=69ce3653&hm=238fb907ff1c006165275ad3a542139c8a1dd99ffe7f332e238c0bf5c5daaf52&=")
+    embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1491483610291634418/standard_6.gif?ex=69d7dbdb&is=69d68a5b&hm=3043de840e883d64b4d56467845b15b254dbe7c5771764cc73507e4a2ca5cd9f&=")
     embed.set_footer(text="FileMG | by lort")
     await ctx.send(embed=embed, view=FileMG3View())
     await ctx.message.delete()
@@ -142,7 +142,7 @@ class FileMG4View(View):
 @mod_check()
 async def filemg4(ctx):
     embed = discord.Embed(title="Выберите инструмент из категории", description="Выберите вариант в меню ниже, чтобы просмотреть подробную информацию и получить ссылку для скачивания.", color=discord.Color.purple())
-    embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1489194360854675488/standard_4.gif?ex=69cf87d3&is=69ce3653&hm=238fb907ff1c006165275ad3a542139c8a1dd99ffe7f332e238c0bf5c5daaf52&=")
+    embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1491483610291634418/standard_6.gif?ex=69d7dbdb&is=69d68a5b&hm=3043de840e883d64b4d56467845b15b254dbe7c5771764cc73507e4a2ca5cd9f&=")
     embed.set_footer(text="FileMG | by lort")
     await ctx.send(embed=embed, view=FileMG4View())
     await ctx.message.delete()
@@ -200,7 +200,7 @@ async def filemg5(ctx):
         description="Выберите вариант в меню ниже, чтобы просмотреть подробную информацию и получить ссылку для скачивания.",
         color=discord.Color.purple()
     )
-    embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1489194360854675488/standard_4.gif?ex=69cf87d3&is=69ce3653&hm=238fb907ff1c006165275ad3a542139c8a1dd99ffe7f332e238c0bf5c5daaf52&=")
+    embed.set_image(url="https://media.discordapp.net/attachments/1483812220499398717/1491483610291634418/standard_6.gif?ex=69d7dbdb&is=69d68a5b&hm=3043de840e883d64b4d56467845b15b254dbe7c5771764cc73507e4a2ca5cd9f&=")
     embed.set_footer(text="FileMG | by lort")
     await ctx.send(embed=embed, view=FileMG5View())
     await ctx.message.delete()    
