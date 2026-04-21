@@ -36,7 +36,7 @@ class FileMGSelect(Select):
         }
         selected = self.values[0]
         link = links[selected]
-        embed = discord.Embed(title=f"📥 {selected}", description=f"[**Скачать {selected}**]({link})", color=discord.Color.black())
+        embed = discord.Embed(title=f"📥 {selected}", description=f"[**Скачать {selected}**]({link})", color=discord.Color.purple())
         embed.set_footer(text="FileMG | by lort")
         await interaction.response.send_message(embed=embed, ephemeral=True)
 
