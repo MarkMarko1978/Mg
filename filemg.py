@@ -22,7 +22,7 @@ class FileMGSelect(Select):
         options = [
             discord.SelectOption(label="Liberium 1.7 Opinion", description="Нажми чтобы получить ссылку", emoji="📦"),
             discord.SelectOption(label="Xworm v5.6", description="Нажми чтобы получить ссылку", emoji="📦"),
-            discord.SelectOption(label="Liberium 1.7", description="Нажми чтобы получить ссылку", emoji="📦"),
+            discord.SelectOption(label="Liberium 1.8", description="Нажми чтобы получить ссылку", emoji="📦"),
         ]
         super().__init__(placeholder="Выберите инструмент...", options=options)
 
